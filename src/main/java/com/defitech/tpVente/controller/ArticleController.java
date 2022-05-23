@@ -29,7 +29,7 @@ public class ArticleController {
     @GetMapping("/articlesForm")
     public String ShowFormArticle(Model model){
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
-        return "ooi/articleForm";
+        return "design/articleForm";
     }
     @PostMapping("/articles/save")
     public String saveArticle(Article article){

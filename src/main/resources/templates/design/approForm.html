@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta charset="utf-8">
@@ -282,12 +282,12 @@
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Components</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>article</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.html">
-              <i class="bi bi-circle"></i><span>Alerts</span>
+            <a th:href="@{/articlesForm}">
+              <i class="bi bi-circle"></i><span>Formulaire d'article</span>
             </a>
           </li>
           <li>
@@ -520,7 +520,35 @@
 
     <section class="section">
       <div class="container">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire d'approvisionement d'un article</h2></a>
+          </li>
+        </ul>
 
+        <form class="row g-3" th:action="@{/appro/save}" method="post">
+          <div class="col-12">
+            <label for="validationDefault01" class="form-label"><h3>Approvisionnement</h3></label>
+            <select class="form-select" id="validationDefault01" name="articleId" required>
+              <option selected disabled value="">..Sélectionnez une article à approvisionner</option>
+              <option th:each="app:${listeAppro}"
+                      th:value="${app.id}"
+                      th:text="${app.libelle}">
+              </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="validationDefault02" class="form-label">Qte approvisionnement</label>
+            <input type="number" class="form-control" id="validationDefault02" name="qteAppro" value="Qte approvisionnement" required>
+          </div>
+
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enregistrer</button>
+            <button class="btn btn-primary" type="reset">Annuler</button>
+            <!--Lien vers la page liste d'approvisionnement-->
+            <a  class="btn btn-success" th:href="@{/appro/show}" >Liste des approvisionnements</a>
+          </div>
+        </form>
       </div>
     </section>
 

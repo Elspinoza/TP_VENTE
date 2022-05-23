@@ -18,9 +18,9 @@ public class CategorieController {
         //pas obligé d'avoir le mm nom que le return
         return "categorie/ListeCategories";
     }
-    @GetMapping("/categorie/form")
+    @GetMapping("/categorieForm")
     public String showFormCategorie(){
-        return "categorie/FormCategories";
+        return "design/categorieForm";
     }
     @PostMapping("/categorie/save")
     public String saveCategorie(Categorie categorie){

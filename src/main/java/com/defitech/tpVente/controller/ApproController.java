@@ -26,10 +26,10 @@ public class ApproController {
         //pas obligé d'avoir le mm nom que le return
         return "appro/ListeAppro";
     }
-    @GetMapping("/appro/form")
+    @GetMapping("/approForm")
     public String ShowFormAppro(Model model){
         model.addAttribute("listeAppro",articleService.showAllArticles());
-        return "appro/FormAppro";
+        return "design/approForm";
     }
     @PostMapping("/appro/save")
     public String saveAppro(Appro appro){

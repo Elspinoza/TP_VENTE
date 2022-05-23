@@ -26,10 +26,10 @@ public class VenteController {
         //pas obligé d'avoir le mm nom que le return
         return "vente/ListeVente";
     }
-    @GetMapping("/vente/form")
+    @GetMapping("/venteForm")
     public String ShowFormVente(Model model){
         model.addAttribute("listeVente",articleService.showAllArticles());
-        return "vente/FormVente";
+        return "design/venteForm";
     }
     @PostMapping("/vente/save")
     public String saveVente(Vente vente){

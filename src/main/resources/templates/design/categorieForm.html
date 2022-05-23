@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" >
 
 <head>
   <meta charset="utf-8">
@@ -522,40 +522,20 @@
       <div class="container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire d'ajout d'un article</h2></a>
+            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire de catégorie</h2></a>
           </li>
         </ul>
 
-        <form class="row g-3" th:action="@{/articles/save}" method="post">
+
+        <form class="row g-3" th:action="@{/categorie/save}" method="post">
           <div class="col-12">
             <label for="validationDefault01" class="form-label"><h3>Designation</h3></label>
-            <select class="form-select" id="validationDefault01" name="categorieId" required>
-              <option selected disabled value="">..Sélectionnez une categorie</option>
-              <option th:each="cat:${listeCategorie}"
-                      th:value="${cat.id}"
-                      th:text="${cat.designation}">
-              </option>
-            </select>
-          </div>
-          <div class="col-md-6">
-            <label for="validationDefault02" class="form-label">Libelle</label>
-            <input type="text" class="form-control" id="validationDefault02" name="libelle" value="Libelle" required>
-          </div>
-          <div class="col-md-6">
-            <label for="validationDefault03" class="form-label">Prix</label>
-            <input type="number" class="form-control" id="validationDefault03" name="prix" value="Prix" required>
-          </div>
-
-          <div class="col-md-6">
-            <label for="validationDefault05" class="form-label">Qte seuil</label>
-            <input type="number" class="form-control" id="validationDefault05" name="qteSeuil" required>
+            <input type="text" class="form-control" id="validationDefault01" name="designation" required>
           </div>
           <div class="col-12">
             <button class="btn btn-primary" type="submit">Enregistrer</button>
             <button class="btn btn-primary" type="reset">Annuler</button>
-            <!--Bouton permettant l'ouverture de la page de la liste des articles-->
-            <a class="btn btn-success" aria-current="page" th:href="@{/articles/show}">Liste des articles></a>
-
+            <a  class="btn btn-success" th:href="@{/categorie/form}" >Liste des categories</a>
           </div>
         </form>
       </div>
