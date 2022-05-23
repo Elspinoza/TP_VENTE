@@ -44,7 +44,12 @@
 </nav>
 <div class="container">
 
-    <h2>Liste des ventes</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><h2>Liste des ventes</h2></a>
+        </li>
+    </ul>
+
     <table class="table">
         <thead>
         <tr>
@@ -70,6 +75,7 @@
         </tbody>
         <tfoot></tfoot>
     </table>
+    <a  class="btn btn-success" th:href="@{/vente/form}" >Formulaire de vente</a>
 </div>
 <script src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>

@@ -43,7 +43,12 @@
     </div>
 </nav>
 <div class="container">
-    <h2>Liste des approvisionnements</h2>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#"><h2>Liste des approvisionnements</h2></a>
+        </li>
+    </ul>
+
     <table class="table">
         <thead>
         <tr>
@@ -69,6 +74,9 @@
         </tbody>
         <tfoot></tfoot>
     </table>
+    <!--Lien vers la page de formumaire d'aprovisionnement-->
+    <a  class="btn btn-success" th:href="@{/appro/form}" >Formulaire d'approvisionnement</a>
+
 </div>
 <script src="@{/js/bootstrap.bundle.min.js}"></script>
 </body>

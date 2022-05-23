@@ -26,10 +26,10 @@ public class ArticleController {
         //pas obligé d'avoir le mm nom que le return
         return "article/ListeArticles";
     }
-    @GetMapping("/articles/form")
+    @GetMapping("/articlesForm")
     public String ShowFormArticle(Model model){
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
-        return "article/FormArticles";
+        return "ooi/articleForm";
     }
     @PostMapping("/articles/save")
     public String saveArticle(Article article){
