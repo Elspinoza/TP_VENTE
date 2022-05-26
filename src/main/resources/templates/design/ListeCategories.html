@@ -408,22 +408,26 @@
       <div class="container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire de catégorie</h2></a>
+            <a class="nav-link active" aria-current="page" href="#"><h2>Liste des catégories</h2></a>
           </li>
         </ul>
 
-
-        <form class="row g-3" th:action="@{/categorie/save}" method="post">
-          <div class="col-12">
-            <label for="validationDefault01" class="form-label"><h3>Designation</h3></label>
-            <input type="text" class="form-control" id="validationDefault01" name="designation" required>
-          </div>
-          <div class="col-12">
-            <button class="btn btn-primary" type="submit">Enregistrer</button>
-            <button class="btn btn-primary" type="reset">Annuler</button>
-            <a  class="btn btn-success" th:href="@{/categorie/form}" >Liste des categories</a>
-          </div>
-        </form>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Désigantion</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- thymeleaf a se documenter-->
+          <tr th:each="categorie:${listeCategorie}">
+            <td th:text="${categorie.id}"></td>
+            <td th:text="${categorie.designation}"></td>
+          </tr>
+          </tbody>
+        </table>
+        <a  class="btn btn-success" th:href="@{/categorieForm}" >Formulaire de categorie</a>
       </div>
     </section>
 

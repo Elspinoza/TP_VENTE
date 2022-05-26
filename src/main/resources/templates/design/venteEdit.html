@@ -408,20 +408,34 @@
       <div class="container">
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire de catégorie</h2></a>
+            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire de mise à jour d'une vente</h2></a>
           </li>
         </ul>
 
-
-        <form class="row g-3" th:action="@{/categorie/save}" method="post">
-          <div class="col-12">
-            <label for="validationDefault01" class="form-label"><h3>Designation</h3></label>
-            <input type="text" class="form-control" id="validationDefault01" name="designation" required>
+        <form class="row g-3" th:action="@{/vente/update}" th:object="${Une_vente}" method="post">
+          <div class="Form-group">
+            <input type="hidden" th:field="*{id}" class="Form-control">
+            <input type="hidden" th:field="*{dateVente}" class="Form-control">
+            <!--<input type="hidden" th:field="*{qteVente}" class="Form-control">-->
           </div>
+          <div class="col-12">
+            <label><h3>Vente</h3></label>
+            <select class="form-select" id="validationDefault01" th:field="*{articleId}" required>
+              <option th:each="vte:${listeVente}"
+                      th:value="${vte.id}"
+                      th:utext="${vte.libelle}">
+
+              </option>
+            </select>
+          </div>
+          <div class="col-12">
+            <label for="validationDefault02" class="form-label">Qte vente</label>
+            <input type="number" th:field="*{qteVente}" class="form-control" id="validationDefault02" >
+          </div>
+
           <div class="col-12">
             <button class="btn btn-primary" type="submit">Enregistrer</button>
             <button class="btn btn-primary" type="reset">Annuler</button>
-            <a  class="btn btn-success" th:href="@{/categorie/form}" >Liste des categories</a>
           </div>
         </form>
       </div>

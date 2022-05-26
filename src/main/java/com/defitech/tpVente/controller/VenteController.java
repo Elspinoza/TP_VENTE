@@ -20,11 +20,11 @@ public class VenteController {
     @Autowired
     private ArticleService articleService;
 
-    @GetMapping("/vente/show")
+    @GetMapping("/venteShow")
     public String showAllVente(Model model){
         model.addAttribute("listeVente",venteService.showAllVente());
         //pas obligé d'avoir le mm nom que le return
-        return "vente/ListeVente";
+        return "design/ListeVente";
     }
     @GetMapping("/venteForm")
     public String ShowFormVente(Model model){
@@ -36,9 +36,9 @@ public class VenteController {
         vente.setQteVente(vente.getQteVente());
         vente.setDateVente(LocalDate.now());
         venteService.saveVente(vente);
-        return "redirect:/vente/show";
+        return "redirect:/venteShow";
     }
-    @GetMapping("/vente/edit/{id}")
+    @GetMapping("/venteEdit{id}")
     public String venteEdit(@PathVariable("id") int id, Model model){
         model.addAttribute("Une_vente",venteService.showOnevente(id));
         model.addAttribute("listeVente",articleService.showAllArticles());
@@ -47,13 +47,13 @@ public class VenteController {
     @PostMapping("vente/update")
     public  String updateVente(@ModelAttribute("vente") Vente vente){
         venteService.saveVente(vente);
-        return "redirect:/vente/show";
+        return "redirect:/venteShow";
 
     }
     @GetMapping("/vente/delete/{id}")
     public String deleteVente(@PathVariable("id") int id){
         venteService.deleteVente(id);
-        return "redirect:/vente/show";
+        return "redirect:/venteShow";
 
     }
 

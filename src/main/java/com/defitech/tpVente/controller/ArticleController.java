@@ -20,11 +20,11 @@ public class ArticleController {
     private CategorieService categorieService;
     @Autowired
     private ArticleService articleService;
-    @GetMapping("/articles/show")
+    @GetMapping("/articleShow")
     public String showAllArticles(Model model){
         model.addAttribute("listeArticle",articleService.changerEtatArticle( articleService.showAllArticles()));
         //pas obligé d'avoir le mm nom que le return
-        return "article/ListeArticles";
+        return "design/listesArticles";
     }
     @GetMapping("/articlesForm")
     public String ShowFormArticle(Model model){
@@ -36,29 +36,29 @@ public class ArticleController {
         article.setQteStock(0);
         article.setDateCreation(LocalDate.now());
         articleService.saveArticle(article);
-        return "redirect:/articles/show";
+        return "redirect:/articleShow";
     }
-    @GetMapping("/article/edit/{id}")
+    @GetMapping("/articleEdit{id}")
     public String formEdit(@PathVariable("id") int id, Model model){
         model.addAttribute("Un_article",articleService.showOneArticle(id));
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
-        return "article/formEdit";
+        return "design/formEdit";
     }
-    @PostMapping("articles/update")
+    @PostMapping("/articles/update")
     public  String updateArticle(@ModelAttribute("article") Article article){
         articleService.saveArticle(article);
-        return "redirect:/articles/show";
+        return "redirect:/articleShow";
 
     }
     @GetMapping("/article/delete/{id}")
     public String deleteArticle(@PathVariable("id") int id){
         articleService.deleteArticle(id);
-        return "redirect:/articles/show";
+        return "redirect:/articleShow";
 
     }
-    @GetMapping("articles/etatSeuil")
+    @GetMapping("/articleEtatSeuil")
     public String listeSeuil(Model model){
         model.addAttribute("listeSeuil",articleService.articleEtatCritique(articleService.showAllArticles()));
-        return "article/listeSeuil";
+        return "design/listeSeuil";
     }
 }

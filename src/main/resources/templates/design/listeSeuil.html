@@ -406,24 +406,45 @@
 
     <section class="section">
       <div class="container">
-        <ul class="nav nav-tabs">
+        <!--<ul class="nav nav-tabs">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#"><h2>Formulaire de catégorie</h2></a>
+            <a class="nav-link active" aria-current="page" href="#"><h2>Liste des articles</h2></a>
           </li>
-        </ul>
-
-
-        <form class="row g-3" th:action="@{/categorie/save}" method="post">
-          <div class="col-12">
-            <label for="validationDefault01" class="form-label"><h3>Designation</h3></label>
-            <input type="text" class="form-control" id="validationDefault01" name="designation" required>
-          </div>
-          <div class="col-12">
-            <button class="btn btn-primary" type="submit">Enregistrer</button>
-            <button class="btn btn-primary" type="reset">Annuler</button>
-            <a  class="btn btn-success" th:href="@{/categorie/form}" >Liste des categories</a>
-          </div>
-        </form>
+        </ul>-->
+        <h2>Liste des articles en dessous du seuil</h2>
+        <table class="table">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Catégorie</th>
+            <th>Libellé</th>
+            <th>Prix</th>
+            <th>Qte stock</th>
+            <th>Qte Seuil</th>
+            <th>Date Creation</th>
+            <th>Etat</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <!-- thymeleaf a se documenter-->
+          <tr th:each="article:${listeSeuil}">
+            <td th:text="${article.id}"></td>
+            <td th:text="${article.categorie.designation}"></td>
+            <td th:text="${article.libelle}"></td>
+            <td th:text="${article.prix}"></td>
+            <td th:text="${article.qteStock}"></td>
+            <td th:text="${article.qteSeuil}"></td>
+            <td th:text="${article.dateCreation}"></td>
+            <td th:text="${article.etat}"></td>
+            <td>
+              <a class="btn btn-danger" th:href="@{/article/delete/{id}(id=${article.id})}" role="button">Delete</a>
+              <a class="btn btn-primary" th:href="@{/articleEdit{id}(id=${article.id})}"role="button">Editer</a>
+            </td>
+          </tr>
+          </tbody>
+          <tfoot></tfoot>
+        </table>
       </div>
     </section>
 
