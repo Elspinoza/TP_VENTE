@@ -26,12 +26,12 @@ public class ArticleController {
         //pas obligé d'avoir le mm nom que le return
         return "design/listesArticles";
     }
-    @GetMapping("/articlesForm")
+    @GetMapping("/articleForm")
     public String ShowFormArticle(Model model){
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
         return "design/articleForm";
     }
-    @PostMapping("/articles/save")
+    @PostMapping("/article/save")
     public String saveArticle(Article article){
         article.setQteStock(0);
         article.setDateCreation(LocalDate.now());
@@ -44,7 +44,7 @@ public class ArticleController {
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
         return "design/formEdit";
     }
-    @PostMapping("/articles/update")
+    @PostMapping("/article/update")
     public  String updateArticle(@ModelAttribute("article") Article article){
         articleService.saveArticle(article);
         return "redirect:/articleShow";
