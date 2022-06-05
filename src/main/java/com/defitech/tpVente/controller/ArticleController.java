@@ -56,7 +56,7 @@ public class ArticleController {
         return "redirect:/articleShow";
 
     }
-    @GetMapping("/articleEtatSeuil")
+    @GetMapping("/articlesEtatSeuil")
     public String listeSeuil(Model model){
         model.addAttribute("listeSeuil",articleService.articleEtatCritique(articleService.showAllArticles()));
         return "design/listeSeuil";
