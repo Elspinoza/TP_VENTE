@@ -4,54 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fa28cea2-1f58-4002-a9b8-e1c67f12da8a" name="Changes" comment="one">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/HomeControlleur.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/modele/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/modele/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/repository/RoleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/repository/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/SecurityService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/SecurityServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/web/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/web/UserValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/design/ListeName.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/registration.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/welcome.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/validation.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/HomeController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/controller/ArticleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/modele/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/modele/Article.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/repository/ArticleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/repository/ArticleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/defitech/tpVente/service/ArticleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/ListeAppro.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/ListeAppro.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/ListeCategories.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/ListeCategories.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/ListeVente.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/ListeVente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/approEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/approEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/approForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/approForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/articleForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/articleForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/categorieForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/categorieForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/formEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/formEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/listeSeuil.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/listeSeuil.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/listesArticles.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/listesArticles.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/venteEdit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/venteEdit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/design/venteForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/design/venteForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/HomeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/controller/ArticleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/controller/CategorieController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/controller/CategorieController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/modele/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/modele/Article.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/repository/ArticleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/repository/ArticleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/defitech/tpVente/service/ArticleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/design/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/design/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/design/listesArticles.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/design/listesArticles.html" afterDir="false" />
-    </list>
+    <list default="true" id="fa28cea2-1f58-4002-a9b8-e1c67f12da8a" name="Changes" comment="last" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -185,7 +138,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653279296587</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="last">
+      <created>1654637738728</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1654637738728</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -214,7 +174,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="one" />
-    <option name="LAST_COMMIT_MESSAGE" value="one" />
+    <MESSAGE value="last" />
+    <option name="LAST_COMMIT_MESSAGE" value="last" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
