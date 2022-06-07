@@ -6,10 +6,7 @@ import com.defitech.tpVente.service.CategorieService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 
@@ -31,7 +28,7 @@ public class ArticleController {
         model.addAttribute("listeCategorie",categorieService.showAllCategories());
         return "design/articleForm";
     }
-    @PostMapping("/article/save")
+    @PostMapping("/articles/save")
     public String saveArticle(Article article){
         article.setQteStock(0);
         article.setDateCreation(LocalDate.now());
@@ -61,4 +58,18 @@ public class ArticleController {
         model.addAttribute("listeSeuil",articleService.articleEtatCritique(articleService.showAllArticles()));
         return "design/listeSeuil";
     }
+
+    //FONCTION DE RECHERCHE D'UN ARTICLE
+    @GetMapping("/name")
+    public String Liste(Model model, @RequestParam String libelle){
+        model.addAttribute("listeByNamer", articleService.findByLibelle(libelle));
+        return "/design/ListeName";
+    }
+
+    @PostMapping("/article/nom")
+    public String listeByName(@RequestParam String desi){
+        articleService.findByLibelle(desi);
+        return "redirect:/name";
+    }
+
 }

@@ -25,8 +25,13 @@ public class Article {
     @DateTimeFormat(pattern = "yyyy/MM/dd")//format de la date (valable juste en dessous)
     private LocalDate dateCreation;
     private int qteSeuil;
+
     @Transient
     private String etat;
+
+    @Transient
+    private String desi;
+
     @ManyToOne//pour une categorie j'ai plusieurs articles
     @JoinColumn(name= "categorieId",insertable = false, updatable = false)
     private Categorie categorie;

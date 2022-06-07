@@ -30,6 +30,10 @@ public class ArticleService {
     }
     public void updateStockArticle(int qte, int id){
         articleRepository.updateStockArticle(qte, id);}
+    public void degrade(int qte_art, int id_Art){
+        articleRepository.degradeStockArticle(qte_art, id_Art);
+    }
+
     public List<Article> changerEtatArticle(List<Article> liste){
         for (Article a:liste){
             if (a.getQteSeuil()>a.getQteStock()){
@@ -52,4 +56,17 @@ public class ArticleService {
         return listeSeuil;
     }
 
+    public List<Article> findByLibelle(String libelle){
+        return articleRepository.findByName(libelle);
+    }
+    //
+    public List<Article> findByName(List<Article> liste) {
+        List<Article> listeName = new ArrayList<>();
+        for (Article a :liste ){
+            if (a.getLibelle() == a.getDesi()){
+                listeName.add(a);
+            }
+        }
+        return listeName;
+    }
 }
